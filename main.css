@@ -1,0 +1,267 @@
+/*Necessities*/
+*{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif, Larabie;
+}
+
+@font-face {
+    font-family: Larabie;
+    src: url(Larabiefont-Rg.otf);
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(45deg, rgb(255,69,0) 25%, rgb(255,140,0) 100%);
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+/*Necessities*/
+
+
+/*Main Page*/
+.nav-bar{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2vh;
+    border-radius: 2vh;
+    display:flex;    
+}
+
+.nav-bar-title{
+    background: linear-gradient(0deg, rgb(255,69,0) 25%, rgb(255,140,0) 100%);
+    margin-right: auto;
+    border-radius: 1vh;
+    color: white;
+    font-family: Larabie;
+    text-align: center;
+    padding: 2vh;
+    font-size: 3vh;
+}
+
+li, a{
+    border-radius: 1vh;
+    color: white;
+    text-align: center;
+    font-family: Larabie;
+    padding: 2vh;
+    font-size: 3vh;
+}
+
+.nav-buttons{
+    list-style: none;
+}
+
+.nav-buttons li{
+    background: linear-gradient(0deg, rgb(255,69,0) 25%, rgb(255,140,0) 100%);
+    display: inline-block;
+}
+
+.nav-buttons li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-buttons li a:hover{
+    color: black;
+}
+
+.homepage-content{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 1vh;
+    padding: 5vh;
+    border-radius: 2vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic{
+    width:15vw;
+    margin-right: 5vh;
+    border-radius: 50%;
+}
+
+.introduction-texts{
+    display:grid;
+}
+
+.intro-text-h1{
+    font-size: 4vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.intro-text-p1{
+    font-size: 3vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.xamk-link{
+    font-size: 3vh;
+    font-family: Larabie;
+    color:white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.xamk-link:hover{
+    color: yellow;
+}
+
+.homepage-content-2{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 1vh;
+    padding: 5vh;
+    border-radius: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-content-text-h1{
+    font-size: 4vh;
+    margin-bottom: 5vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.homepage-content-text-p1{
+    font-size: 3vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2vh;
+    margin-top: 1vh;
+    border-radius: 2vh;
+    display:flex;
+}
+
+.footer-title{
+    border-radius: 1vh;
+    margin-right: auto;
+    color: white;
+    font-family: Larabie;
+    text-align: center;
+    padding: 1vh;
+    font-size: 4vh;
+}
+
+.footer-buttons{
+    list-style: none;
+}
+
+.footer-buttons li{
+    display: inline-block;
+}
+
+.footer-button-email{
+    background: linear-gradient(180deg, rgb(180, 0, 42) 25%, rgb(114, 0, 27) 100%);
+}
+
+.footer-button-linkedin{
+    background: linear-gradient(180deg, rgb(15, 73, 235) 25%, rgb(9, 53, 172) 100%);
+}
+
+.footer-button-github{
+    background: linear-gradient(180deg, rgb(69, 0, 166) 25%, rgb(50, 9, 106) 100%);
+}
+
+.footer-buttons li a{
+    transition: all 0.3s ease 0s;
+}
+
+.footer-buttons li a:hover{
+    color: black;
+}
+/*Main Page*/
+
+
+
+/*About me Page*/
+.about-me-texts{
+    display:grid;
+}
+
+.about-me-text-h1{
+    padding:auto;
+    font-size: 4vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.about-me-text-p1{
+    padding-top: 5vh;
+    font-size: 3vh;
+    font-family: Larabie;
+    color:white;
+}
+/*About me Page*/
+
+
+
+/*Projects*/
+.projects-texts{
+    display:grid;
+}
+
+.projects-text-h1{
+    padding:auto;
+    font-size: 4vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.projects-text-p1{
+    padding-top: 5vh;
+    font-size: 3vh;
+    font-family: Larabie;
+    color:white;
+}
+
+.projects-images{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 1vh;
+    padding: 5vh;
+    border-radius: 2vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.retro-images{
+    width:25vw;
+    margin: auto;
+}
+/*Projects*/
+
+
+/*Contact Form*/
+.contact-form{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 1vh;
+    padding: 3vh;
+    border-radius: 2vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-size: 3vh;
+    font-family: Larabie;
+    color:white;
+}
+
+input{
+    margin:auto;
+    font-size: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+/*Contact Form*/
