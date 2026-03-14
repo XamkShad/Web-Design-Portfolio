@@ -24,8 +24,12 @@ body {
     min-height: 100%;
 }
 
+ul{
+    padding: 0;
+}
+
 .page{
-    margin: 5vh;
+    margin: 1vh;
 }
 /*Necessities*/
 
@@ -49,7 +53,9 @@ body {
     font-size: 1rem;
 }
 
-li, a{
+.nav-bar-title a,
+.nav-buttons a,
+.footer-buttons a {
     border-radius: 1vh;
     color: white;
     text-align: center;
@@ -62,9 +68,21 @@ li, a{
     list-style: none;
 }
 
+.about-me-text-p1 a{
+    color: white;
+    text-align: center;
+    font-family: Larabie;
+}
+
 .nav-buttons li{
     background: linear-gradient(0deg, rgb(255,69,0) 25%, rgb(255,140,0) 100%);
     display: inline-block;
+    border-radius: 1vh;
+    color: white;
+    text-align: center;
+    font-family: Larabie;
+    padding: 1rem;
+    font-size: 2rem;
 }
 
 .nav-buttons li a{
@@ -75,7 +93,35 @@ li, a{
     color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .nav-bar{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-bar-title{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .nav-buttons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .nav-buttons li{
+        display: block;
+    }
+
+    .nav-buttons a{
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+    }
+
     .homepage-content{
         display: flex;
         flex-direction: column;
@@ -92,8 +138,8 @@ li, a{
 
     .profile-pic{
         order: -1;
-        width:15vw;    
-        max-width: 200px;
+        width:25vw;    
+        max-width: 400px;
         border-radius: 50%;
     }
 
@@ -101,13 +147,49 @@ li, a{
         display: flex;
         flex-direction: column;    
     }
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-title{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .footer-buttons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .footer-buttons a{
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .projects-images{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .retro-images{
+        width:100%;
+        max-width:300px;
+        border-radius: 2vh;
+    }
 }
 
 .homepage-content{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:2rem;
+    gap: 2rem;
 
     background-color: rgba(0, 0, 0, 0.5);
     margin-top:1rem;
@@ -116,25 +198,25 @@ li, a{
 }
 
 .profile-pic{
-    width:15vw;    
+    width:150vh;    
     max-width: 200px;
     border-radius: 50%;
 }
 
 .intro-text-h1{
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: Larabie;
     color:white;
 }
 
 .intro-text-p1{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: Larabie;
     color:white;
 }
 
 .xamk-link{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: Larabie;
     color:white;
     transition: all 0.3s ease 0s;
@@ -155,14 +237,14 @@ li, a{
 }
 
 .homepage-content-text-h1{
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-family: Larabie;
     color:white;
 }
 
 .homepage-content-text-p1{
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: Larabie;
     color:white;
 }
@@ -191,6 +273,12 @@ li, a{
 
 .footer-buttons li{
     display: inline-block;
+    border-radius: 1vh;
+    color: white;
+    text-align: center;
+    font-family: Larabie;
+    padding: 1rem;
+    font-size: 2rem;
 }
 
 .footer-button-email{
@@ -222,15 +310,17 @@ li, a{
 }
 
 .about-me-text-h1{
+    text-align: center;
     padding:auto;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-family: Larabie;
     color:white;
 }
 
 .about-me-text-p1{
+    text-align: center;
     padding-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: Larabie;
     color:white;
 }
@@ -262,14 +352,22 @@ li, a{
     margin-top: 1rem;
     padding: 1.5rem;
     border-radius: 2vh;
-    display: inline-flex;
-    justify-content: center;
+    
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    gap: 1rem;
+}
+
+.projects-images img{
+    flex: 1;
 }
 
 .retro-images{
-    width:25vw;
-    margin: auto;
+    width:100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 2vh;
 }
 /*Projects*/
 
@@ -280,20 +378,30 @@ li, a{
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 2vh;
+    
     display: grid;
-    justify-content: center;
-    align-items: center;
+    gap: 1rem;
 }
 
 label{
     font-size: 1.7rem;
     font-family: Larabie;
     color:white;
+    text-align: left;
+}
+
+textarea{
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
 }
 
 input{
-    margin:auto;
-    font-size: 1.7rem;
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
     font-family: Arial, Helvetica, sans-serif;
     color:black;
 }
