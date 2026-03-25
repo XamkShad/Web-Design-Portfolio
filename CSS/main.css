@@ -1,4 +1,4 @@
-/*Necessities*/
+/* Necessities */
 * {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif, Larabie;
@@ -30,10 +30,10 @@ ul {
 .page {
     margin: 1vh;
 }
-/*Necessities*/
+/* Necessities */
 
 
-/*Navigation*/
+/* Navigation */
 .nav-bar {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
@@ -85,10 +85,10 @@ ul {
             .nav-buttons li a:hover {
                 color: black;
             }
-/*Navigation*/
+/* Navigation */
 
 
-/*Homepage*/
+/* Homepage */
 .homepage-content {
     display: flex;
     justify-content: center;
@@ -149,10 +149,10 @@ ul {
     font-family: Larabie;
     color: white;
 }
-/*Homepage*/
+/* Homepage */
 
 
-/*Footer*/
+/* Footer */
 .footer {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
@@ -203,10 +203,10 @@ ul {
 .footer-button-github {
     background: linear-gradient(180deg, rgb(69, 0, 166) 25%, rgb(50, 9, 106));
 }
-/*Footer*/
+/* Footer */
 
 
-/*About*/
+/* About */
 .about-me-texts {
     display: grid;
 }
@@ -230,10 +230,10 @@ ul {
         color: white;
         font-family: Larabie;
     }
-/*About*/
+/* About */
 
 
-/*Projects*/
+/* Projects */
 .projects-texts {
     display: grid;
 }
@@ -290,10 +290,10 @@ ul {
     height: 100%;
     border-radius: 2vh;
 }
-/*Projects*/
+/* Projects */
 
 
-/*Contact*/
+/* Contact */
 .contact-form {
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 1rem;
@@ -316,12 +316,12 @@ input, textarea {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
-/*Contact*/
+/* Contact */
 
 
 /*Responsiveness*/
 
-/* Tablet */
+/* Mobile platforms */
 @media (min-width: 0px) and (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
@@ -388,8 +388,9 @@ input, textarea {
         border-radius: 2vh;
     }
 }
+/* Mobile platforms */
 
-/* Desktop */
+/* Desktop platforms */
 @media (min-width: 769px) and (max-width: 1200px) {
     .nav-bar {
         text-align: center;
@@ -420,6 +421,7 @@ input, textarea {
         gap: 0.5rem;
     }
 }
+/* Desktop platforms*/
 
 /* Widescreen */
 @media (min-width: 1201px) {
@@ -447,5 +449,6 @@ input, textarea {
         border-radius: 2vh;
     }
 }
+/* Widescreen */
 
 /*Responsiveness*/
