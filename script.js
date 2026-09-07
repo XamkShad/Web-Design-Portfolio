@@ -17,7 +17,6 @@ filterButtons.forEach((button) => {
     button.classList.add("active");
 
     const filter = button.dataset.filter;
-
     projectCards.forEach((card) => {
       const shouldShow = filter === "all" || card.dataset.category === filter;
       card.classList.toggle("hidden", !shouldShow);

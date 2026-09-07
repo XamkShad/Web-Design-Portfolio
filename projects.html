@@ -1,139 +1,85 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Game Technology student projects" />
-  <title>Game Tech Portfolio | Projects</title>
+  <title>PLAYER1 | Projects</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="scanlines"></div>
   <div class="pixel-stars" aria-hidden="true"></div>
-
   <header class="site-header">
-    <a class="logo" href="index.html">
-      <span class="logo-bracket">&lt;</span>PLAYER1<span class="logo-bracket">/&gt;</span>
-    </a>
-
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      MENU
-    </button>
-
-    <nav class="site-nav">
-      <a href="index.html">HOME</a>
-      <a class="active" href="projects.html">PROJECTS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </header>
+  <a class="logo" href="index.html"><span class="logo-bracket">&lt;</span>PLAYER1<span class="logo-bracket">/&gt;</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+  <nav class="site-nav">
+    <a href="index.html">HOME</a>
+    <a class="active" href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
 
   <main class="page-shell page-content">
     <section class="page-title">
-      <p class="eyebrow">MISSION SELECT</p>
+      <p class="eyebrow">STAGE SELECT</p>
       <h1>PROJECT ARCHIVE</h1>
-      <p>
-        Current builds, completed work and experiments from my Game Technology studies
-        and personal development.
-      </p>
+      <p>Current builds, completed work and experiments from my Game Technology studies and personal development. Select a project to open its full write-up.</p>
     </section>
 
-    <section class="project-filter">
+    <section class="project-filter" aria-label="Filter projects">
       <button class="filter-btn active" data-filter="all">ALL</button>
       <button class="filter-btn" data-filter="current">CURRENT</button>
       <button class="filter-btn" data-filter="past">PAST</button>
     </section>
 
     <section class="project-grid">
-      <article class="project-card" data-category="current">
-          <div class="project-image">
-            <img src="IMG/mayhem-drive.png" alt="Mayhem Drive">
-          </div>
+      <a class="project-card" data-category="current" href="project-mayhem-drive.html">
+        <div class="project-image"><img class="pixel-art" src="IMG/mayhem-drive.png" alt="Mayhem Drive artwork" /></div>
         <div class="project-body">
-          <div class="project-meta">
-            <span class="project-status current">CURRENT</span>
-            <span>UNITY // C#</span>
-          </div>
+          <div class="project-meta"><span class="project-status current">CURRENT</span><span>UNITY // C#</span></div>
           <h2>Mayhem Drive</h2>
-          <p>
-            Arcade combat-racing project featuring custom vehicle systems,
-            multiplayer-focused design and an origami art visual direction.
-          </p>
-          <div class="tag-row">
-            <span>Unity</span><span>C#</span><span>Multiplayer</span><span>3D</span>
-          </div>
+          <p>Arcade combat-racing project featuring custom vehicle systems, multiplayer-focused design and a stylized retro presentation.</p>
+          <div class="tag-row"><span>Unity</span><span>C#</span><span>Multiplayer</span><span>3D</span></div>
+          <div class="project-open">OPEN PROJECT <span>▶</span></div>
         </div>
-      </article>
+      </a>
 
-      <article class="project-card" data-category="current">
-        <div class="project-image project-image-two">
-          <span>Import Pipeline</span>
-          <div class="pixel-cube">◆</div>
-        </div>
+      <a class="project-card" data-category="current" href="project-mayhem-tools.html">
+        <div class="project-image"><div class="project-placeholder"><span>◆</span></div></div>
         <div class="project-body">
-          <div class="project-meta">
-            <span class="project-status current">CURRENT</span>
-            <span>BLENDER // UNITY // PYTHON // C#</span>
-          </div>
+          <div class="project-meta"><span class="project-status current">CURRENT</span><span>BLENDER // UNITY // PYTHON // C#</span></div>
           <h2>Mayhem Asset Tools</h2>
-          <p>
-            A custom Blender workflow toolset for preparing cars,
-            their stats & data, naming conventions and scripts.
-          </p>
-          <div class="tag-row">
-            <span>Blender</span><span>Python</span><span>Tools</span><span>Pipeline</span>
-          </div>
+          <p>A custom Blender workflow toolset for preparing cars, their stats &amp; data, naming conventions and scripts.</p>
+          <div class="tag-row"><span>Blender</span><span>Python</span><span>Tools</span><span>Pipeline</span></div>
+          <div class="project-open">OPEN PROJECT <span>▶</span></div>
         </div>
-      </article>
+      </a>
 
-      <article class="project-card" data-category="past">
-        <div class="project-image project-image-three">
-          <span>ARCHIVE_03.DAT</span>
-          <div class="pixel-crosshair">+</div>
-        </div>
+      <a class="project-card" data-category="past" href="project-template.html">
+        <div class="project-image"><div class="project-placeholder"><span>+</span></div></div>
         <div class="project-body">
-          <div class="project-meta">
-            <span class="project-status past">PAST</span>
-            <span>GAME PROJECT</span>
-          </div>
+          <div class="project-meta"><span class="project-status past">PAST</span><span>GAME PROJECT</span></div>
           <h2>Project Title</h2>
-          <p>
-            Replace this with a previous school, personal or team project.
-            Explain your role, the goal and what you learned from the project.
-          </p>
-          <div class="tag-row">
-            <span>Game Dev</span><span>Teamwork</span><span>Prototype</span>
-          </div>
+          <p>Duplicate the included project template for any previous school, personal or team project you want to showcase.</p>
+          <div class="tag-row"><span>Game Dev</span><span>Teamwork</span><span>Prototype</span></div>
+          <div class="project-open">OPEN TEMPLATE <span>▶</span></div>
         </div>
-      </article>
+      </a>
 
-      <article class="project-card" data-category="past">
-        <div class="project-image project-image-four">
-          <span>ARCHIVE_04.DAT</span>
-          <div class="pixel-ship">▲</div>
-        </div>
+      <a class="project-card" data-category="past" href="project-template.html">
+        <div class="project-image"><div class="project-placeholder"><span>▲</span></div></div>
         <div class="project-body">
-          <div class="project-meta">
-            <span class="project-status past">PAST</span>
-            <span>EXPERIMENT</span>
-          </div>
+          <div class="project-meta"><span class="project-status past">PAST</span><span>EXPERIMENT</span></div>
           <h2>Another Project</h2>
-          <p>
-            Use this slot for a technical experiment, 3D scene, game jam,
-            coursework project or another piece of work worth showing.
-          </p>
-          <div class="tag-row">
-            <span>Unity</span><span>3D</span><span>Design</span>
-          </div>
+          <p>Use this slot for a technical experiment, 3D scene, game jam, coursework project or another piece of work worth showing.</p>
+          <div class="tag-row"><span>Unity</span><span>3D</span><span>Design</span></div>
+          <div class="project-open">OPEN TEMPLATE <span>▶</span></div>
         </div>
-      </article>
+      </a>
     </section>
   </main>
 
-  <footer class="site-footer page-shell">
-    <span>© 2026 PLAYER1</span>
-    <span>PROJECT DATABASE ONLINE</span>
-  </footer>
-
+  <footer class="site-footer page-shell"><span>© 2026 PLAYER1</span><span>CHOOSE YOUR STAGE</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

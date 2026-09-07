@@ -1,41 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Game Technology student portfolio" />
-  <title>Game Tech Portfolio | Home</title>
+  <title>PLAYER1 | Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="scanlines"></div>
   <div class="pixel-stars" aria-hidden="true"></div>
-
   <header class="site-header">
-    <a class="logo" href="index.html">
-      <span class="logo-bracket">&lt;</span>PLAYER1<span class="logo-bracket">/&gt;</span>
-    </a>
-
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      MENU
-    </button>
-
-    <nav class="site-nav">
-      <a class="active" href="index.html">HOME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </header>
+  <a class="logo" href="index.html"><span class="logo-bracket">&lt;</span>PLAYER1<span class="logo-bracket">/&gt;</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+  <nav class="site-nav">
+    <a class="active" href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
 
   <main>
     <section class="hero page-shell">
       <div class="hero-copy">
         <p class="eyebrow">GAME TECHNOLOGY STUDENT // PORTFOLIO</p>
-        <h1>
-          BUILDING
-          <span>GAMES, SYSTEMS</span>
-          & DIGITAL WORLDS.
-        </h1>
+        <h1>BUILDING <span>GAMES, SYSTEMS</span> &amp; DIGITAL WORLDS.</h1>
 
         <p class="hero-text">
           I’m a Game Technology student focused on programming, 3D work,
@@ -43,7 +31,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="pixel-button primary" href="projects.html">VIEW PROJECTS</a>
+          <a class="pixel-button primary" href="projects.html">SELECT PROJECT</a>
           <a class="pixel-button" href="contact.html">CONTACT ME</a>
         </div>
 
@@ -54,43 +42,23 @@
         </div>
       </div>
 
-      <div class="hero-console" aria-label="Decorative game interface">
+      <div class="hero-console" aria-label="Player profile">
         <div class="console-window">
-          <div class="window-top">
-            <span>PLAYER_PROFILE.EXE</span>
-            <span>[ X ]</span>
-          </div>
+          <div class="window-top"><span>PLAYER SELECT</span><span>1P</span></div>
 
           <div class="avatar-grid">
-            <div class="pixel-avatar">
-              <div class="avatar-head"></div>
-              <div class="avatar-body"></div>
-            </div>
+            <img class="profile-picture" src="IMG/profile_picture.png" alt="Pixel art profile portrait" />
+            <div class="player-nameplate">PLAYER1 // GAME TECH</div>
           </div>
 
           <div class="stat-list">
-            <div class="stat">
-              <span>PROGRAMMING</span>
-              <div class="meter"><b style="width: 74%"></b></div>
-            </div>
-            <div class="stat">
-              <span>3D ART</span>
-              <div class="meter"><b style="width: 80%"></b></div>
-            </div>
-            <div class="stat">
-              <span>UNITY</span>
-              <div class="meter"><b style="width: 86%"></b></div>
-            </div>
-            <div class="stat">
-              <span>GAME DESIGN</span>
-              <div class="meter"><b style="width: 77%"></b></div>
-            </div>
+            <div class="stat"><span>PROGRAMMING</span><div class="meter"><b style="width: 74%"></b></div></div>
+            <div class="stat"><span>3D ART</span><div class="meter"><b style="width: 80%"></b></div></div>
+            <div class="stat"><span>UNITY</span><div class="meter"><b style="width: 86%"></b></div></div>
+            <div class="stat"><span>GAME DESIGN</span><div class="meter"><b style="width: 77%"></b></div></div>
           </div>
 
-          <div class="console-message">
-            &gt; CURRENT OBJECTIVE:<br />
-            &gt; CREATE SOMETHING WORTH PLAYING
-          </div>
+          <div class="console-message">CURRENT QUEST:<br />CREATE SOMETHING WORTH PLAYING</div>
         </div>
       </div>
     </section>
@@ -98,45 +66,19 @@
     <section class="skills-section page-shell">
       <div class="section-heading">
         <span>01</span>
-        <div>
-          <p class="eyebrow">LOADOUT</p>
-          <h2>WHAT I CAN DO</h2>
-        </div>
+        <div><p class="eyebrow">PLAYER LOADOUT</p><h2>WHAT I CAN DO</h2></div>
       </div>
 
       <div class="skill-grid">
-        <article class="tech-card">
-          <span class="card-id">SYS_01</span>
-          <h3>PROGRAMMING</h3>
-          <p>C#, gameplay systems, tools, logic, debugging and technical prototyping.</p>
-        </article>
-
-        <article class="tech-card">
-          <span class="card-id">SYS_02</span>
-          <h3>UNITY</h3>
-          <p>Gameplay development, multiplayer systems, optimization and production workflows.</p>
-        </article>
-
-        <article class="tech-card">
-          <span class="card-id">SYS_03</span>
-          <h3>3D ART</h3>
-          <p>Modelling, texturing, animation, asset creation and custom production tools.</p>
-        </article>
-
-        <article class="tech-card">
-          <span class="card-id">SYS_04</span>
-          <h3>GAME DEVELOPMENT</h3>
-          <p>From early concepts to prototypes, systems, iteration and finished presentation.</p>
-        </article>
+        <article class="tech-card"><span class="card-id">SKILL_01</span><h3>PROGRAMMING</h3><p>C#, gameplay systems, tools, logic, debugging and technical prototyping.</p></article>
+        <article class="tech-card"><span class="card-id">SKILL_02</span><h3>UNITY</h3><p>Gameplay development, multiplayer systems, optimization and production workflows.</p></article>
+        <article class="tech-card"><span class="card-id">SKILL_03</span><h3>3D ART</h3><p>Modelling, texturing, animation, asset creation and custom production tools.</p></article>
+        <article class="tech-card"><span class="card-id">SKILL_04</span><h3>GAME DEVELOPMENT</h3><p>From early concepts to prototypes, systems, iteration and finished presentation.</p></article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer page-shell">
-    <span>© 2026 PLAYER1</span>
-    <span>INSERT COIN TO CONTINUE</span>
-  </footer>
-
+  <footer class="site-footer page-shell"><span>© 2026 PLAYER1</span><span>INSERT COIN TO CONTINUE</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

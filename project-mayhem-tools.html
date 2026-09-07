@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mayhem Asset Tools project write-up" />
+  <title>PLAYER1 | Mayhem Asset Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="pixel-stars" aria-hidden="true"></div>
+  <header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-bracket">&lt;</span>PLAYER1<span class="logo-bracket">/&gt;</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+  <nav class="site-nav">
+    <a href="index.html">HOME</a>
+    <a class="active" href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+  <main class="article-shell project-article">
+    <a class="pixel-link" href="projects.html">◀ BACK TO PROJECT SELECT</a>
+    <div class="article-kicker"><span>CURRENT PROJECT</span><span>//</span><span>BLENDER + PYTHON + UNITY</span></div>
+    <h1>Mayhem Asset Tools</h1>
+    <p class="article-lede">A custom production-tool workflow made to speed up the preparation of vehicles and game-ready data for Mayhem Drive.</p>
+
+    <div class="article-hero"><div class="project-placeholder" style="min-height: 420px;"><span>◆</span></div></div>
+
+    <div class="article-layout">
+      <article class="article-main">
+        <section class="article-section">
+          <h2>WHY I BUILT IT</h2>
+          <p>Vehicle assets need consistent names, damage states, detach points and export structure. Repeating those steps manually makes mistakes much more likely, so I began turning the workflow into reusable Blender tools.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>TOOLING FOCUS</h2>
+          <ul>
+            <li>Preparing and organizing vehicle meshes for export.</li>
+            <li>Handling structured damage-state naming.</li>
+            <li>Creating detachable-part and spawn-point data.</li>
+            <li>Keeping Blender-to-Unity exports predictable.</li>
+            <li>Reducing repetitive setup through Python automation.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>WHAT I LEARN FROM IT</h2>
+          <p>This project is as much about pipeline design as scripting. A good tool is not simply one that automates a task; it needs to fit the way assets are actually authored, make mistakes visible and produce consistent results for the game engine.</p>
+        </section>
+
+        <section class="devlog">
+          <h2>DEVLOG</h2>
+          <article class="devlog-entry"><time>UPDATE 01</time><h3>DAMAGE EXPORT</h3><p>Built workflow support for multiple vehicle damage states and standardized export naming.</p></article>
+          <article class="devlog-entry"><time>UPDATE 02</time><h3>DETACHABLE PARTS</h3><p>Added workflow support around detachable parts and their Unity-side spawn references.</p></article>
+        </section>
+      </article>
+
+      <aside class="project-facts">
+        <h3>PROJECT DATA</h3>
+        <div class="fact"><small>STATUS</small><strong>In Development</strong></div>
+        <div class="fact"><small>PRIMARY TOOL</small><strong>Blender</strong></div>
+        <div class="fact"><small>SCRIPTING</small><strong>Python</strong></div>
+        <div class="fact"><small>TARGET</small><strong>Unity Pipeline</strong></div>
+        <div class="fact"><small>TYPE</small><strong>Developer Tooling</strong></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer article-shell"><span>© 2026 PLAYER1</span><span>TOOL DATA LOADED</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
