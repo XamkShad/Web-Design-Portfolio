@@ -43,3 +43,27 @@ CONTACT LINKS
 -------------
 The LinkedIn, GitHub and Discord URLs from your supplied page were corrected so
 the URLs are in href and rel is used for noopener/noreferrer.
+
+
+DEVLOG IMAGES
+-------------
+Each devlog entry can contain one or more pictures:
+
+<div class="devlog-media">
+  <figure>
+    <img src="IMG/devlog-example.png" alt="Description of the screenshot">
+    <figcaption>Optional caption.</figcaption>
+  </figure>
+</div>
+
+For pixel art, add class="pixel-art" to the img element.
+
+NEWEST DEVLOG FIRST
+-------------------
+Each entry now uses data-order:
+
+<article class="devlog-entry" data-order="3"> ... </article>
+
+Use a higher number for every newer update. script.js sorts entries from highest
+to lowest automatically. The example HTML is also written newest-first so the
+order still makes sense if JavaScript is disabled.

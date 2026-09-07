@@ -35,7 +35,26 @@
 
         <section class="devlog">
           <h2>DEVLOG</h2>
-          <article class="devlog-entry"><time>YYYY-MM-DD</time><h3>UPDATE TITLE</h3><p>Write a short development update here. Duplicate this block for additional posts.</p></article>
+          <!-- Give each entry a larger data-order number than the previous entry.
+               JavaScript automatically displays the highest/newest number first. -->
+          <article class="devlog-entry" data-order="2">
+            <time>NEWEST UPDATE</time>
+            <h3>UPDATE TITLE</h3>
+            <p>Write the newest development update here.</p>
+
+            <div class="devlog-media">
+              <figure>
+                <img src="IMG/your-devlog-image.png" alt="Describe what is shown in the devlog image">
+                <figcaption>Optional image caption.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="devlog-entry" data-order="1">
+            <time>OLDER UPDATE</time>
+            <h3>EARLIER UPDATE TITLE</h3>
+            <p>Older entries automatically appear below newer ones.</p>
+          </article>
         </section>
       </article>
 

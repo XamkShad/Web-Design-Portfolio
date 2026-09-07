@@ -985,3 +985,46 @@ img { max-width: 100%; }
     padding: 18px 0;
   }
 }
+
+/* Devlog pictures / galleries */
+.devlog-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin: 20px 0 6px;
+}
+
+.devlog-media figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.devlog-media img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--cyan);
+  background: #080b1a;
+  box-shadow: 5px 5px 0 var(--purple);
+}
+
+.devlog-media img.pixel-art {
+  image-rendering: pixelated;
+}
+
+.devlog-media figcaption {
+  margin-top: 10px;
+  color: #8e98bd;
+  font-family: var(--arcade-font);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 720px) {
+  .devlog-media {
+    grid-template-columns: 1fr;
+  }
+}
+

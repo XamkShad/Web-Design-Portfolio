@@ -23,3 +23,14 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// Keep project devlogs newest-first.
+// Give each .devlog-entry a data-order number; higher numbers are newer.
+document.querySelectorAll(".devlog").forEach((devlog) => {
+  const entries = Array.from(devlog.querySelectorAll(".devlog-entry[data-order]"));
+
+  entries
+    .sort((a, b) => Number(b.dataset.order) - Number(a.dataset.order))
+    .forEach((entry) => devlog.appendChild(entry));
+});
+
