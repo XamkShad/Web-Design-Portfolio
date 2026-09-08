@@ -73,11 +73,25 @@
           <article class="devlog-entry" data-order="1">
             <time>UPDATE 01</time>
             <h3>CORE SYSTEMS</h3>
-            <p>Building and iterating on the vehicle, damage and gameplay systems that form the foundation of the project.</p>
+            <p>
+                So it begins. I wanted predictable, simple and arcade-y car physics. Since the project was targeting
+                mobile platforms, the physics needed to be computationally cheap. It needed to be multiplayer, after all.
+                Car physics start with the wheels, so I immediately looked at Unity's built-in solution: Wheel Colliders.
+                I quickly noticed, the Wheel Collider uses more realistic grip/traction models.
+                <br><br>
+                Hacking Wheel Colliders into arcade behaviour
+                would take a lot more time than just making my own custom solution. So I researched on various
+                sites, until I found great tutorials on the matter in Youtube. None of them made the wheels
+                quite how I liked it, but it taught me what physical interactions were necessary at the very
+                least.
+                <br><br>
+                After a couple of weeks of experimenting, I landed on a solution, that would later be the foundation of
+                the later versions of the Retro Wheel component.
+            </p>
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/mayhem-drive-devlog1.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/mayhem-drive-devlog2.png" alt="Describe what is shown in the devlog image">
                 <figcaption>Trying to figure out custom wheel physics, since Unity's built-in Wheel Collider component doesn't cut it.</figcaption>
               </figure>
             </div>
