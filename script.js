@@ -34,3 +34,54 @@ document.querySelectorAll(".devlog").forEach((devlog) => {
     .forEach((entry) => devlog.appendChild(entry));
 });
 
+
+
+// Interactive before/after image comparisons.
+document.querySelectorAll(".before-after").forEach((comparison) => {
+  const setPosition = (clientX) => {
+    const rect = comparison.getBoundingClientRect();
+    if (!rect.width) return;
+
+    const percent = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    comparison.style.setProperty("--position", `${percent}%`);
+    comparison.setAttribute("aria-valuenow", String(Math.round(percent)));
+  };
+
+  comparison.addEventListener("pointerdown", (event) => {
+    comparison.setPointerCapture(event.pointerId);
+    setPosition(event.clientX);
+    comparison.classList.add("is-dragging");
+    event.preventDefault();
+  });
+
+  comparison.addEventListener("pointermove", (event) => {
+    if (comparison.hasPointerCapture(event.pointerId)) {
+      setPosition(event.clientX);
+    }
+  });
+
+  const stopDragging = (event) => {
+    if (comparison.hasPointerCapture(event.pointerId)) {
+      comparison.releasePointerCapture(event.pointerId);
+    }
+    comparison.classList.remove("is-dragging");
+  };
+
+  comparison.addEventListener("pointerup", stopDragging);
+  comparison.addEventListener("pointercancel", stopDragging);
+
+  comparison.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+
+    let value = Number(comparison.getAttribute("aria-valuenow")) || 50;
+    if (event.key === "ArrowLeft") value -= 5;
+    if (event.key === "ArrowRight") value += 5;
+    if (event.key === "Home") value = 0;
+    if (event.key === "End") value = 100;
+
+    value = Math.max(0, Math.min(100, value));
+    comparison.style.setProperty("--position", `${value}%`);
+    comparison.setAttribute("aria-valuenow", String(value));
+  });
+});

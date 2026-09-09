@@ -63,10 +63,6 @@
             <time>UPDATE 04</time>
             <h3>PLATFORM SWITCH</h3>
             <p>
-              Fuck mobile. Who came up with ARM processors? Tell 'em to shove it.
-              <br><br>              
-              Further context:
-              <br><br>
               I had the game running at a stable 60 FPS with a budget Android
               phone from 2024. It was rendering a simple race track, a few other
               obstacles and checkpoints. But only one car. For the target player
@@ -85,80 +81,119 @@
               All hail the x86 processor. Stephen P. Morse is the MAN.
             </p>
 
-            <!-- Optional devlog picture(s).
-                 Put the image file inside IMG/ and uncomment this block.
             <div class="devlog-media">
               <figure>
-                <img src="IMG/your-devlog-image.png" alt="Describe what is shown in the devlog image">
-                <figcaption>Optional image caption.</figcaption>
+                <img src="IMG/platform-switch1.png" alt="Describe what is shown in the devlog image">
+                <figcaption>
+                    Now it averages 400 FPS on an RTX 5090 & Ryzen 9 9950X3D system. It is severely
+                    bottlenecked by the CPU, since it runs the same at 4K and 1080p resolutions.
+                </figcaption>
               </figure>
             </div>
-            -->
+
           </article>
 
           <article class="devlog-entry" data-order="3">
-            <time>UPDATE 03</time>
-            <h3>GETTING SIDETRACKED</h3>
-            <p>
-              I wanted a dynamic damage system for the cars. For a few weeks, I was working on modeling separate
-              parts for cars, that can get damaged individually, and then detach based on locational damage.
-              <br><br>
-              This would be possible, by separating common detachable car body parts and then making damage models 
-              with them. Dmg0 was intact, Dmg1 would be visibly damaged, and finally Dmg2 would be totalled.
-              With a combination of swapping body meshes in real time, textures would be changed as well for them,
-              individually. 
-              <br><br>
-              I got it working eventually. There was an issue, though. Having so many separate game objects with
-              instanced materials raised the draw calls substantially. On top of that, multiple instanced materials
-              in the scene caused the camera to draw the screen space normal map multiple times as well. So one
-              car could be anything between a couple of draw calls to dozens. That is unacceptable.
-              <br><br>
-              As heartbroken as I was, the damage system needed to go. I pulled the plug on it completely. Besides,
-              it served no other purpose than just being eye-candy. The cars needed to remain predictable no matter 
-              what. So the plan was to have the detached parts be just that, only detached parts. The car would
-              behave the same. So not a huge loss in the end, but I did spend a couple of weeks on it.   
-            </p>
+              <time>UPDATE 03</time>
+              <h3>GETTING SIDETRACKED</h3>
+              <p>
+                  I wanted a dynamic damage system for the cars. For a few weeks, I was working on modeling separate
+                  parts for cars, that can get damaged individually, and then detach based on locational damage.
+                  <br><br>
+                  This would be possible, by separating common detachable car body parts and then making damage models
+                  with them. Dmg0 was intact, Dmg1 would be visibly damaged, and finally Dmg2 would be totalled.
+                  Swapping body meshes in real time, textures would be changed as well for them,
+                  individually.
+                  <br><br>
+                  I got it working eventually. There was an issue, though. Having so many separate game objects with
+                  instanced materials raised the draw calls substantially. On top of that, multiple instanced materials
+                  in the scene caused the camera to draw the screen space normal map multiple times as well. So one
+                  car could be anything between a couple of draw calls to dozens. That is unacceptable.
+                  <br><br>
+                  As heartbroken as I was, the damage system needed to go. I pulled the plug on it completely. Besides,
+                  it served no other purpose than just being eye-candy. The cars needed to remain predictable no matter
+                  what. So the plan was to have the detached parts be just that, only detached parts. The car would
+                  behave the same. So not a huge loss in the end, but I did spend a couple of weeks on it.
+              </p>
 
-            <!-- Optional devlog picture(s).
-                 Put the image file inside IMG/ and uncomment this block.
-            <div class="devlog-media">
-              <figure>
-                <img src="IMG/your-devlog-image.png" alt="Describe what is shown in the devlog image">
-                <figcaption>Optional image caption.</figcaption>
-              </figure>
-            </div>
-            -->
+              <div class="devlog-media">
+                  <figure>
+                      <img src="IMG/mayhem-drive-devlog4.png" alt="Describe what is shown in the devlog image">
+                      <figcaption>Exploded view of the car Bane.</figcaption>
+                  </figure>
+              </div>
+
+              <div class="devlog-media">
+                  <figure>
+                      <img src="IMG/mayhem-drive-devlog3.png" alt="Describe what is shown in the devlog image">
+                      <figcaption>
+                          Bane with damaged parts. At this point,
+                          if a certain area got even more damage, the part could fly off in-game.
+                      </figcaption>
+                  </figure>
+              </div>
+
+              <div class="devlog-media">
+                  <figure>
+                      <img src="IMG/mayhem-drive-devlog5.png" alt="Describe what is shown in the devlog image">
+                      <figcaption>Example of a totaled car. Game over!</figcaption>
+                  </figure>
+              </div>
           </article>
 
           <article class="devlog-entry" data-order="2">
-            <time>UPDATE 02</time>
-            <h3>CARTOON SHADER</h3>
-            <p>
-              Cell shaders would've been easy and simple to add, and there is a lot of resources on how 
-              to do it. But I didn't like how Cell shaders only emphasize the very outer edges of geometry 
-              in camera-space. Also, I think Cell shaders have saturated the indie game scene. It was a good
-              opportunity to stand out, by doing something different.
-              <br><br>
-              The shader had to be computationally reasonable, and easily repeatable. And the effect I ultimately
-              wanted was something between a Cell shader and a Wireframe shader. I wanted something that emphasized
-              sharp corners in the geometry. Lucky for me, Unity is able to generate a camera normal and depth map,
-              and those texture maps can be utilized easily.
-              <br><br>
-              By iterating through each pixel and their neighbouring pixels, we could compare the differences in them.
-              If the difference was above a certain threshold, we know it is a sharp corner, and therefore, a pixel can
-              be drawn on top of that pixel in the screen. I found research on the wanted effect, while searching online.
-              Turns out, someone beat me to it. And they had developed it as a post-processing shader. Even better!                
-            </p>
+              <time>UPDATE 02</time>
+              <h3>CARTOON SHADER</h3>
+              <p>
+                  Cell shaders would've been easy and simple to add, and there is a lot of resources on how
+                  to do it. But I didn't like how Cell shaders only emphasize the very outer edges of geometry
+                  in camera-space. Also, I think Cell shaders have saturated the indie game scene. It was a good
+                  opportunity to stand out, by doing something different.
+                  <br><br>
+                  The shader had to be computationally reasonable, and easily repeatable. And the effect I ultimately
+                  wanted was something between a Cell shader and a Wireframe shader. I wanted something that emphasized
+                  sharp corners in the geometry. Lucky for me, Unity is able to generate a camera normal and depth map,
+                  and those texture maps can be utilized easily.
+                  <br><br>
+                  By iterating through each pixel and their neighbouring pixels, we could compare the differences in them.
+                  If the difference was above a certain threshold, we know it is a sharp corner, and therefore, a pixel can
+                  be drawn on top of that pixel in the screen. I found research on the wanted effect, while searching online.
+                  Turns out, someone beat me to it. And the shader magician, Daniel Ilett had developed it as a post-processing
+                  shader. Even better!
+              </p>
 
-            <!-- Optional devlog picture(s).
-                 Put the image file inside IMG/ and uncomment this block.
-            <div class="devlog-media">
-              <figure>
-                <img src="IMG/your-devlog-image.png" alt="Describe what is shown in the devlog image">
-                <figcaption>Optional image caption.</figcaption>
-              </figure>
-            </div>
-            -->
+              <div class="devlog-media">
+                <figure class="before-after-figure">
+                  <div class="before-after"
+                       tabindex="0"
+                       role="slider"
+                       aria-label="Compare outline shader disabled and enabled"
+                       aria-valuemin="0"
+                       aria-valuemax="100"
+                       aria-valuenow="50"
+                       style="--position: 50%;">
+                    <img class="before-after-image before-after-before"
+                         src="IMG/cartoon-shader1.png"
+                         alt="Mayhem Drive with outline shader disabled">
+
+                    <img class="before-after-image before-after-after"
+                         src="IMG/cartoon-shader2.png"
+                         alt="Mayhem Drive with outline shader enabled">
+
+                    <span class="before-after-label before-label">SHADER OFF</span>
+                    <span class="before-after-label after-label">SHADER ON</span>
+
+                    <div class="before-after-divider" aria-hidden="true">
+                      <span class="before-after-handle">◀▶</span>
+                    </div>
+                  </div>
+
+                  <figcaption>
+                    Drag anywhere across the image to compare the outline shader disabled and enabled.
+                  </figcaption>
+                </figure>
+              </div>
+
           </article>
 
           <article class="devlog-entry" data-order="1">
