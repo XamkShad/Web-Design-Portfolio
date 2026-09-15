@@ -1147,3 +1147,32 @@ img { max-width: 100%; }
   .before-label { left: 9px; }
   .after-label { right: 9px; }
 }
+
+
+/* Devlog video player */
+.devlog-video {
+  width: 100%;
+  margin: 20px 0 6px;
+}
+
+.devlog-video video {
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  display: block;
+  background: #050711;
+  border: 3px solid var(--cyan);
+  box-shadow: 5px 5px 0 var(--purple);
+}
+
+.devlog-video figcaption {
+  margin-top: 10px;
+  color: #8e98bd;
+  font-family: var(--arcade-font);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.devlog-video video[poster] {
+  object-fit: cover;
+}
