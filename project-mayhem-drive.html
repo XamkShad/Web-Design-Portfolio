@@ -60,6 +60,43 @@
           <h2>DEVLOG</h2>
 
           <article class="devlog-entry" data-order="5">
+            <time>UPDATE 07</time>
+            <h3>STARTING COUNTDOWN LIGHTS</h3>
+            <p>
+              The player tags are complete from last time, and I added a sweet light countdown,
+              F1 style. An on screen countdown would do the job, but I thought, since it's a 
+              racing game, it must have actual countdown lights. I modified the existing checkpoint
+              and added the light object. 
+              <br><br>
+              For each sequence, there is an separate lights object for the light colors, and off state.
+              I simply animated them turning on and off, and had the GameModeManager trigger the animator
+              when the countdown reaches 3.            
+            </p>
+
+            <div class="devlog-media">
+              <figure>
+                <img src="IMG/nametags1.png" alt="Describe what is shown in the devlog image">
+                <figcaption>
+                  The local tag is shown for a few seconds when spawning.
+                  Then it disappears.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="devlog-media">
+              <figure>
+                <img src="IMG/nametags2.png" alt="Describe what is shown in the devlog image">
+                <figcaption>
+                  By looking at other players, the tag checks if the angle between it's position
+                  and the view vector of the local camera, is lower than a threshold. 
+                  In this case it's 12°.
+                </figcaption>
+              </figure>
+            </div>
+
+          </article>
+
+          <article class="devlog-entry" data-order="5">
             <time>UPDATE 06</time>
             <h3>PLAYER TAGS</h3>
             <p>
