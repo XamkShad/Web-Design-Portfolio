@@ -59,7 +59,7 @@
         <section class="devlog">
           <h2>DEVLOG</h2>
 
-          <article class="devlog-entry" data-order="5">
+          <article class="devlog-entry" data-order="7">
             <time>UPDATE 07</time>
             <h3>STARTING COUNTDOWN LIGHTS</h3>
             <p>
@@ -98,7 +98,7 @@
 
           </article>
 
-          <article class="devlog-entry" data-order="5">
+          <article class="devlog-entry" data-order="6">
             <time>UPDATE 06</time>
             <h3>PLAYER TAGS</h3>
             <p>
@@ -114,7 +114,7 @@
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/nametags1.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/nametags1.png">
                 <figcaption>
                   The local tag is shown for a few seconds when spawning.
                   Then it disappears.
@@ -124,7 +124,7 @@
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/nametags2.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/nametags2.png">
                 <figcaption>
                   By looking at other players, the tag checks if the angle between it's position
                   and the view vector of the local camera, is lower than a threshold. 
@@ -157,35 +157,35 @@
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/ui-nav1.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/ui-nav1.png">
                 <figcaption>The main menu, animated too! Still needs a few things, like settings. </figcaption>
               </figure>
             </div>
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/ui-nav2.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/ui-nav2.png">
                 <figcaption>Entering LAN, we have options to host a game, or to join one.</figcaption>
               </figure>
             </div>
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/ui-nav3.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/ui-nav3.png">
                 <figcaption>Game creation provides game modes, maps and rules.</figcaption>
               </figure>
             </div>
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/ui-nav4.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/ui-nav4.png">
                 <figcaption>The rules and maps are game mode specific.</figcaption>
               </figure>
             </div>
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/ui-nav-host.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/ui-nav-host.png">
                 <figcaption>
                   When the game is created, the host waits for players in a lobby.
                   The game doesn't start, until the minimum player count is met. The host tells
@@ -196,7 +196,7 @@
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/ui-nav-join.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/ui-nav-join.png">
                 <figcaption>
                   In another instance of the game, a player is joining with a LAN address provided
                   in the hosts screen. In this case, it defaults to the local LAN address, since
@@ -207,7 +207,7 @@
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/multiplayer1.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/multiplayer1.png">
                 <figcaption>
                   Minimum player count met, the game starts, and so does the combat & racing.
                 </figcaption>
@@ -240,7 +240,7 @@
 
             <div class="devlog-media">
               <figure>
-                <img src="IMG/platform-switch1.png" alt="Describe what is shown in the devlog image">
+                <img src="IMG/platform-switch1.png">
                 <figcaption>
                     Now it averages 400 FPS on an RTX 5090 & Ryzen 9 9950X3D system. It is severely
                     bottlenecked by the CPU, since it runs the same at 4K and 1080p resolutions.
@@ -275,14 +275,14 @@
 
               <div class="devlog-media">
                   <figure>
-                      <img src="IMG/mayhem-drive-devlog4.png" alt="Describe what is shown in the devlog image">
+                      <img src="IMG/mayhem-drive-devlog4.png">
                       <figcaption>Exploded view of the car Bane.</figcaption>
                   </figure>
               </div>
 
               <div class="devlog-media">
                   <figure>
-                      <img src="IMG/mayhem-drive-devlog3.png" alt="Describe what is shown in the devlog image">
+                      <img src="IMG/mayhem-drive-devlog3.png">
                       <figcaption>
                           Bane with damaged parts. At this point,
                           if a certain area got even more damage, the part could fly off in-game.
@@ -292,7 +292,7 @@
 
               <div class="devlog-media">
                   <figure>
-                      <img src="IMG/mayhem-drive-devlog5.png" alt="Describe what is shown in the devlog image">
+                      <img src="IMG/mayhem-drive-devlog5.png">
                       <figcaption>Example of a totaled car. Game over!</figcaption>
                   </figure>
               </div>
@@ -354,30 +354,40 @@
           </article>
 
           <article class="devlog-entry" data-order="1">
-            <time>UPDATE 01</time>
-            <h3>CORE SYSTEMS</h3>
-            <p>
-                So it begins. I wanted predictable, simple and arcade-y car physics. Since the project was targeting
-                mobile platforms, the physics needed to be computationally cheap. It needed to be multiplayer, after all.
-                Car physics start with the wheels, so I immediately looked at Unity's built-in solution: Wheel Colliders.
-                I quickly noticed, the Wheel Collider uses more realistic grip/traction models.
-                <br><br>
-                Hacking Wheel Colliders into arcade behaviour
-                would take a lot more time than just making my own custom solution. So I researched on various
-                sites, until I found great tutorials on the matter in Youtube. None of them made the wheels
-                quite how I liked it, but it taught me what physical interactions were necessary at the very
-                least.
-                <br><br>
-                After a couple of weeks of experimenting, I landed on a solution, that would later be the foundation of
-                the later versions of the Retro Wheel component.
-            </p>
+              <time>UPDATE 01</time>
+              <h3>CORE SYSTEMS</h3>
+              <p>
+                  So it begins. I wanted predictable, simple and arcade-y car physics. Since the project was targeting
+                  mobile platforms, the physics needed to be computationally cheap. It needed to be multiplayer, after all.
+                  Car physics start with the wheels, so I immediately looked at Unity's built-in solution: Wheel Colliders.
+                  I quickly noticed, the Wheel Collider uses more realistic grip/traction models.
+                  <br><br>
+                  Hacking Wheel Colliders into arcade behaviour
+                  would take a lot more time than just making my own custom solution. So I researched on various
+                  sites, until I found great tutorials on the matter in Youtube. None of them made the wheels
+                  quite how I liked it, but it taught me what physical interactions were necessary at the very
+                  least.
+                  <br><br>
+                  After a couple of weeks of experimenting, I landed on a solution, that would later be the foundation of
+                  the later versions of the Retro Wheel component.
+              </p>
 
-            <div class="devlog-media">
-              <figure>
-                <img src="IMG/mayhem-drive-devlog2.png" alt="Describe what is shown in the devlog image">
-                <figcaption>Trying to figure out custom wheel physics, since Unity's built-in Wheel Collider component doesn't cut it.</figcaption>
+              <figure class="devlog-video">
+                  <video controls preload="metadata">
+                      <source src="IMG/mayhem-drive-demo1.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                  </video>
+                  <figcaption>
+                      Looking good, for a prototype.
+                  </figcaption>
               </figure>
-            </div>
+
+              <div class="devlog-media">
+                  <figure>
+                      <img src="IMG/mayhem-drive-devlog2.png">
+                      <figcaption>Trying to figure out custom wheel physics, since Unity's built-in Wheel Collider component doesn't cut it.</figcaption>
+                  </figure>
+              </div>
 
           </article>
         </section>
